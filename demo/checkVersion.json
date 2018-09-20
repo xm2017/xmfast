@@ -1,7 +1,7 @@
 {
-	"isForcedUpdate ": false,
-	"versionCode": "500",
-	"versionName ": "4.2.1",
-	"updateContent ": "这是一个大更新",
-	"downLoadUrl ": "http://www.baidu.com"
+	"isForcedUpdate":false,
+	"versionCode":"500",
+	"versionName":"4.2.1",
+	"updateContent":"这是一个大更新",
+	"downLoadUrl":"http://www.baidu.com"
 }
