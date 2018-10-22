@@ -1,7 +1,7 @@
 {
 	"isForcedUpdate":false,
-	"versionCode":"441",
-	"versionName":"4.4.1",
-	"updateContent":"1,搜索失败的问题得到了解决 2,综合搜索改为实时搜索 3,优化追剧提醒更加省电",
-	"downLoadUrl":"https://www.lanzous.com/i221xtc"
+	"versionCode":"451",
+	"versionName":"4.5.1",
+	"updateContent":"1,增加播放器画面比例调整功能 2,优化嗅探资源速度 3,优化所有界面滑动特效",
+	"downLoadUrl":"https://www.lanzous.com/i24pxji"
 }
