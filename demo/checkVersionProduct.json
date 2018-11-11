@@ -1,7 +1,7 @@
 {
 	"isForcedUpdate":false,
-	"versionCode":"451",
-	"versionName":"4.5.1",
-	"updateContent":"1,增加播放器画面比例调整功能 2,优化嗅探资源速度 3,优化所有界面滑动特效",
-	"downLoadUrl":"https://www.lanzous.com/i24pxji"
+	"versionCode":"462",
+	"versionName":"4.6.2",
+	"updateContent":"1,升级播放器内核 2,优化播放器性能",
+	"downLoadUrl":"https://www.lanzous.com/i285qkb"
 }
