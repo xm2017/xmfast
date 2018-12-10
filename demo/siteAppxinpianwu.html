@@ -1,0 +1,316 @@
+
+<site>
+    <packgetName>com.xinpianwu</packgetName>
+    <minApi>1</minApi>
+    <author name="noName" avatarUrl="" description="大神在此" donateUrl=""/>
+
+    <info type="801" versionCode="001" versionName="v1.0" name="新片屋" description=""
+          iconUrl="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1540382938564&di=4e090acb13a0dcf99c7b50e2ded621d3&imgtype=0&src=http%3A%2F%2Fgss0.baidu.com%2F-vo3dSag_xI4khGko9WTAnF6hhy%2Fzhidao%2Fpic%2Fitem%2Fa044ad345982b2b73d5b7b1d3aadcbef77099b27.jpg"
+          subscribeUrl="https://raw.githubusercontent.com/xm2017/xmfast/master/demo/siteAppxinpianwu.html"/>
+
+    <rule type="101" typeOnclickAction="" subTypeName="电影" jsMethod="list();"
+          url="https://www.xinpianwu.com/type/8-%count%.html"
+          currentPageCountHolder="%count%" searchKeywordHolder="">
+        <script>
+      function list() {
+        var host = "https://www.xinpianwu.com";
+        var tmparray = new Array();
+        var response;
+        $("div.stui-vodlist__box").each(function (i) {
+          var href = $(this).find("a").attr("href");
+          var title = $(this).find("a").attr("title");
+          var imgurl = $(this).find("a").attr("data-original");
+          if (!imgurl) {
+            imgurl = $(this).find("a").attr("src");
+          }
+          var content = $(this).find("a").find("span.pic-text.text-right").text();
+          var obj = {
+            "title": title,
+            "detailUrl": host + href,
+            "posterUrl": imgurl,
+            "content": content
+          };
+          tmparray.push(obj);
+        });
+        if (tmparray.length == 0) {
+          response = {
+            "code": "200",
+            "msg": "suc",
+            "content": ""
+          };
+        } else {
+          response = {
+            "code": "200",
+            "msg": "suc",
+            "content": JSON.stringify(tmparray)
+          };
+        }
+        console.log("result:" + JSON.stringify(tmparray));
+        return response;
+      }
+        </script>
+
+    </rule>
+
+    <rule type="101" typeOnclickAction="" subTypeName="追剧" jsMethod="list();"
+          url="https://www.xinpianwu.com/type/2-%count%.html"
+          currentPageCountHolder="%count%" searchKeywordHolder="">
+        <script>
+      function list() {
+        var host = "https://www.xinpianwu.com";
+        var tmparray = new Array();
+        var response;
+        $("div.stui-vodlist__box").each(function (i) {
+          var href = $(this).find("a").attr("href");
+          var title = $(this).find("a").attr("title");
+          var imgurl = $(this).find("a").attr("data-original");
+          if (!imgurl) {
+            imgurl = $(this).find("a").attr("src");
+          }
+          var content = $(this).find("a").find("span.pic-text.text-right").text();
+          var obj = {
+            "title": title,
+            "detailUrl": host + href,
+            "posterUrl": imgurl,
+            "content": content
+          };
+          tmparray.push(obj);
+        });
+        if (tmparray.length == 0) {
+          response = {
+            "code": "200",
+            "msg": "suc",
+            "content": ""
+          };
+        } else {
+          response = {
+            "code": "200",
+            "msg": "suc",
+            "content": JSON.stringify(tmparray)
+          };
+        }
+        console.log("result:" + JSON.stringify(tmparray));
+        return response;
+      }
+        </script>
+    </rule>
+
+    <rule type="101" typeOnclickAction="" subTypeName="动漫" jsMethod="list();"
+          url="https://www.xinpianwu.com/type/4-%count%.html"
+          currentPageCountHolder="%count%" searchKeywordHolder="">
+        <script>
+      function list() {
+        var host = "https://www.xinpianwu.com";
+        var tmparray = new Array();
+        var response;
+        $("div.stui-vodlist__box").each(function (i) {
+          var href = $(this).find("a").attr("href");
+          var title = $(this).find("a").attr("title");
+          var imgurl = $(this).find("a").attr("data-original");
+          if (!imgurl) {
+            imgurl = $(this).find("a").attr("src");
+          }
+          var content = $(this).find("a").find("span.pic-text.text-right").text();
+          var obj = {
+            "title": title,
+            "detailUrl": host + href,
+            "posterUrl": imgurl,
+            "content": content
+          };
+          tmparray.push(obj);
+        });
+        if (tmparray.length == 0) {
+          response = {
+            "code": "200",
+            "msg": "suc",
+            "content": ""
+          };
+        } else {
+          response = {
+            "code": "200",
+            "msg": "suc",
+            "content": JSON.stringify(tmparray)
+          };
+        }
+        console.log("result:" + JSON.stringify(tmparray));
+        return response;
+      }
+        </script>
+
+    </rule>
+
+    <rule type="101" typeOnclickAction="" subTypeName="综艺" jsMethod="list();"
+          url="https://www.xinpianwu.com/type/3-%count%.html"
+          currentPageCountHolder="%count%" searchKeywordHolder="">
+        <script>
+      function list() {
+        var host = "https://www.xinpianwu.com";
+        var tmparray = new Array();
+        var response;
+        $("div.stui-vodlist__box").each(function (i) {
+          var href = $(this).find("a").attr("href");
+          var title = $(this).find("a").attr("title");
+          var imgurl = $(this).find("a").attr("data-original");
+          if (!imgurl) {
+            imgurl = $(this).find("a").attr("src");
+          }
+          var content = $(this).find("a").find("span.pic-text.text-right").text();
+          var obj = {
+            "title": title,
+            "detailUrl": host + href,
+            "posterUrl": imgurl,
+            "content": content
+          };
+          tmparray.push(obj);
+        });
+        if (tmparray.length == 0) {
+          response = {
+            "code": "200",
+            "msg": "suc",
+            "content": ""
+          };
+        } else {
+          response = {
+            "code": "200",
+            "msg": "suc",
+            "content": JSON.stringify(tmparray)
+          };
+        }
+        console.log("result:" + JSON.stringify(tmparray));
+        return response;
+      }
+        </script>
+
+    </rule>
+
+    <rule type="102" jsMethod="detail();">
+        <script>
+
+      function detail() {
+        var host = "https://www.xinpianwu.com";
+        var response;
+        var posterUrl;
+        var pageTitle;
+        var content;
+        var allText;
+        var shortText;
+        var actor = "<br>";
+        var allDownList = new Array();
+        $("a.stui-vodlist__thumb.v-thumb.lazyload").first().each(function () {
+          posterUrl = $(this).attr("data-original");
+          pageTitle = $(this).attr("title");
+          content = $(this).find("span.pic-text.text-right").text();
+        });
+        allText = $("span.detail-sketch").text();
+        shortText = allText.substring(0, allText.length > 200 ? 200 : allText.length).trim();
+        $("p.data").each(function (position) {
+          if (position == 0) {
+            return;
+          }
+          if (position == 1) {
+            var titleSt = $(this).find("span.text-muted").text();
+            actor = actor + " " + titleSt;
+            var textSt = $(this).find("a").text();
+            actor = actor + textSt + "<br>";
+          }
+          if (position == 2) {
+            var titleSt = $(this).find("span.text-muted").first().text();
+            actor = actor + " " + titleSt;
+            var textSt = $(this).find("a").first().text();
+            actor = actor + textSt + "<br>";
+            titleSt = $(this).find("span.text-muted:eq(1)").first().text();
+            actor = actor + " " + titleSt;
+            textSt = $(this).find("a:eq(1)").first().text();
+            actor = actor + textSt + "<br>";
+            titleSt = $(this).find("span.text-muted:eq(2)").first().text();
+            actor = actor + " " + titleSt;
+            textSt = $(this).clone().children().remove().end().text().trim();
+            actor = actor + textSt + "<br>";
+          }
+        });
+        var tmpDownloadSort = {};
+        $("div.stui-pannel__head.bottom-line.active.clearfix").find("h3.title").each(function (position) {
+          tmpDownloadSort[position] = $(this).text();
+        });
+        $("ul.stui-content__playlist.column10.clearfix").each(function (position) {
+          var oneDownList = new Array();
+          $(this).find("a").each(function () {
+            var href = $(this).attr("href");
+            var title = $(this).attr("title");
+            var downloadBean = {
+              "name": title,
+              "href": host + href
+            };
+            oneDownList.push(downloadBean);
+          });
+          var pageDetail = {
+            "title": tmpDownloadSort[position],
+            "downlistInfos": oneDownList
+          };
+          allDownList.push(pageDetail);
+        });
+        var pageInfo = {
+          "posterUrl": posterUrl,
+          "title": pageTitle,
+          "allText": allText,
+          "shortText": shortText,
+          "summary": actor,
+          "downlist": allDownList,
+          "content": content
+        };
+        var response = {
+          "code": "200",
+          "msg": "suc",
+          "content": pageInfo
+        };
+        console.log("result:" + JSON.stringify(response));
+        return response;
+      }
+        </script>
+    </rule>
+
+    <rule type="103" typeOnclickAction="" subTypeName="" jsMethod="search();"
+          url="https://www.xinpianwu.com/index.php?m=vod-search-pg-%count%-wd-%keyword%.html"
+          currentPageCountHolder="%count%" searchKeywordHolder="%keyword%">
+        <script>
+      function search() {
+        var host = "https://www.xinpianwu.com";
+        var tmparray = new Array();
+        var response;
+        $("li.active.top-line-dot.clearfix").each(function (i) {
+          var href = $(this).find("div.thumb").find("a").attr("href");
+          var title = $(this).find("div.thumb").find("a").attr("title");
+          var imgurl = $(this).find("div.thumb").find("a").attr("data-original");
+          if (!imgurl) {
+            imgurl = $(this).find("div.thumb").find("a").attr("src");
+          }
+          var content = $(this).find("div.thumb").find("a").find("span.pic-text.text-right").text();
+          var obj = {
+            "title": title,
+            "detailUrl": host + href,
+            "posterUrl": imgurl,
+            "content": content
+          };
+          tmparray.push(obj);
+        });
+        if (tmparray.length == 0) {
+          response = {
+            "code": "200",
+            "msg": "suc",
+            "content": ""
+          };
+        } else {
+          response = {
+            "code": "200",
+            "msg": "suc",
+            "content": JSON.stringify(tmparray)
+          };
+        }
+        console.log("result:" + JSON.stringify(tmparray));
+        return response;
+      }
+        </script>
+    </rule>
+</site>
+
+
