@@ -848,243 +848,6 @@
 </site>
 
 <site>
-    <packgetName>com.kanyingwu</packgetName>
-    <minApi>1</minApi>
-    <author name="xiaoliang" avatarUrl="" description="群友提供" donateUrl=""/>
-
-    <info type="801" versionCode="002" versionName="v2.0" name="看影屋" description="资源还不错啊"
-          iconUrl="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1536517260926&di=c5c673c553223c236363d9582fec2305&imgtype=0&src=http%3A%2F%2Fimgsrc.baidu.com%2Fimgad%2Fpic%2Fitem%2F359b033b5bb5c9ea4675cceadf39b6003af3b331.jpg"
-          subscribeUrl="https://raw.githubusercontent.com/xm2017/xmfast/master/demo/siteAppkanyingwu.html"/>
-
-    <rule type="101" typeOnclickAction="" subTypeName="电影" jsMethod="list();"
-          url="http://m.kanyingwu.com/dy/index_%count%_____hits__1.html"
-          currentPageCountHolder="%count%"
-          searchKeywordHolder="">
-        <script>
-      function list() {
-        var host = "http://m.kanyingwu.com";
-        var root = document.getElementById("vod_list");
-        var datalist = root.getElementsByTagName("li");
-
-        if (datalist.length == 0) {
-          var response = {"code": "200", "msg": "suc", "content": ""};
-          return response;
-        }
-        var tmparray = new Array();
-        for (var i = 0; i < datalist.length; i++) {
-          var href = datalist[i].getElementsByTagName("a")[0].href;
-          var title = datalist[i].getElementsByTagName("a")[0].title;
-          var imgurl = datalist[i].getElementsByTagName("img")[0].getAttribute("src");
-          var content = datalist[i].getElementsByTagName("img")[0].alt;
-          var obj = {"title": title, "detailUrl": href, "posterUrl": imgurl, "content": content};
-          tmparray.push(obj);
-        }
-        var response = {"code": "200", "msg": "suc", "content": JSON.stringify(tmparray)};
-        return response;
-      }
-
-
-
-        </script>
-
-    </rule>
-
-    <rule type="101" typeOnclickAction="" subTypeName="追剧" jsMethod="list();"
-          url="http://m.kanyingwu.com/dsj/index_%count%_____addtime__1.html"
-          currentPageCountHolder="%count%"
-          searchKeywordHolder="">
-        <script>
-      function list() {
-        var host = "http://m.kanyingwu.com";
-        var root = document.getElementById("vod_list");
-        var datalist = root.getElementsByTagName("li");
-
-        if (datalist.length == 0) {
-          var response = {"code": "200", "msg": "suc", "content": ""};
-          return response;
-        }
-        var tmparray = new Array();
-        for (var i = 0; i < datalist.length; i++) {
-          var href = datalist[i].getElementsByTagName("a")[0].href;
-          var title = datalist[i].getElementsByTagName("a")[0].title;
-          var imgurl = datalist[i].getElementsByTagName("img")[0].getAttribute("src");
-          var content = datalist[i].getElementsByTagName("img")[0].alt;
-          var obj = {"title": title, "detailUrl": href, "posterUrl": imgurl, "content": content};
-          tmparray.push(obj);
-        }
-        var response = {"code": "200", "msg": "suc", "content": JSON.stringify(tmparray)};
-        return response;
-      }
-
-
-
-        </script>
-    </rule>
-
-    <rule type="101" typeOnclickAction="" subTypeName="动漫" jsMethod="list();"
-          url="http://m.kanyingwu.com/Animation/index_%count%_____addtime__1.html"
-          currentPageCountHolder="%count%"
-          searchKeywordHolder="">
-        <script>
-      function list() {
-        var host = "http://m.kanyingwu.com";
-        var root = document.getElementById("vod_list");
-        var datalist = root.getElementsByTagName("li");
-
-        if (datalist.length == 0) {
-          var response = {"code": "200", "msg": "suc", "content": ""};
-          return response;
-        }
-        var tmparray = new Array();
-        for (var i = 0; i < datalist.length; i++) {
-          var href = datalist[i].getElementsByTagName("a")[0].href;
-          var title = datalist[i].getElementsByTagName("a")[0].title;
-          var imgurl = datalist[i].getElementsByTagName("img")[0].getAttribute("src");
-          var content = datalist[i].getElementsByTagName("img")[0].alt;
-          var obj = {"title": title, "detailUrl": href, "posterUrl": imgurl, "content": content};
-          tmparray.push(obj);
-        }
-        var response = {"code": "200", "msg": "suc", "content": JSON.stringify(tmparray)};
-        return response;
-      }
-
-
-
-        </script>
-
-    </rule>
-
-    <rule type="101" typeOnclickAction="" subTypeName="综艺" jsMethod="list();"
-          url="http://m.kanyingwu.com/Arts/index_%count%_____addtime__1.html"
-          currentPageCountHolder="%count%"
-          searchKeywordHolder="">
-        <script>
-      function list() {
-        var host = "http://m.kanyingwu.com";
-        var root = document.getElementById("vod_list");
-        var datalist = root.getElementsByTagName("li");
-
-        if (datalist.length == 0) {
-          var response = {"code": "200", "msg": "suc", "content": ""};
-          return response;
-        }
-        var tmparray = new Array();
-        for (var i = 0; i < datalist.length; i++) {
-          var href = datalist[i].getElementsByTagName("a")[0].href;
-          var title = datalist[i].getElementsByTagName("a")[0].title;
-          var imgurl = datalist[i].getElementsByTagName("img")[0].getAttribute("src");
-          var content = datalist[i].getElementsByTagName("img")[0].alt;
-          var obj = {"title": title, "detailUrl": href, "posterUrl": imgurl, "content": content};
-          tmparray.push(obj);
-        }
-        var response = {"code": "200", "msg": "suc", "content": JSON.stringify(tmparray)};
-        return response;
-      }
-
-
-
-        </script>
-
-    </rule>
-
-    <rule type="102" jsMethod="detail();">
-        <script>
-
-      function detail() {
-        var host = "http://m.kanyingwu.com";
-        var posterUrl = $("img.loading:first").get(0).getAttribute("data-original");
-        var pageTitle = $("img.loading").get(0).getAttribute("alt");
-        var allText = $("div.vod_content").get(0).innerText.trim().replace(" ", "").replace("\n", "");
-        var shortText = allText.substring(0, allText.length > 200 ? 200 : allText.length).trim();
-
-        var actor;
-        var actorTmp = $("div.vod-n-l:first p").toArray();
-        for (var i = 0; i < actorTmp.length; i++) {
-          var stTmp;
-          stTmp = actorTmp[i].getElementsByTagName("em")[0].innerHTML;
-          if (stTmp.indexOf("主演") != -1) continue;
-          if (stTmp.indexOf("状态") != -1 || stTmp.indexOf("更新") != -1) {
-            stTmp = actorTmp[i].innerHTML;
-          }
-          var stDetail = actorTmp[i].getElementsByTagName("a");
-          for (var j = 0; j < stDetail.length; j++) {
-            var stDetailTmp = stDetail[j].innerHTML;
-            stTmp = stTmp + " " + stDetailTmp;
-          }
-          actor = actor + "<br>" + stTmp;
-        }
-
-        var allDownList = new Array();
-        var allDownTitleTmp = $("div.play-title a").toArray();
-        var allDownListTmp = $(".play-box").toArray();
-        for (var i = 0; i < allDownListTmp.length; i++) {
-          var titleSort = allDownTitleTmp[i].innerHTML;
-          var downloadTmp = allDownListTmp[i].getElementsByTagName("li");
-          var oneDownList = new Array();
-          for (var j = 0; j < downloadTmp.length; j++) {
-            var href = host + downloadTmp[j].getElementsByTagName("a")[0].getAttribute("href");
-            var title = downloadTmp[j].getElementsByTagName("a")[0].getAttribute("title");
-            var downloadBean = {"name": title, "href": href};
-            oneDownList.push(downloadBean);
-          }
-          var pageDetail = {"title": titleSort, "downlistInfos": oneDownList};
-          allDownList.push(pageDetail);
-        }
-
-        var pageInfo = {
-          "posterUrl": posterUrl,
-          "title": pageTitle,
-          "allText": allText,
-          "shortText": shortText,
-          "summary": actor.replace("undefined", ""),
-          "downlist": allDownList
-        };
-        var response = {"code": "200", "msg": "suc", "content": pageInfo};
-        return response;
-      }
-
-
-
-
-        </script>
-    </rule>
-
-    <rule type="103" typeOnclickAction="" subTypeName="" jsMethod="search();"
-          url="http://m.kanyingwu.com/vod-search-wd-%keyword%-p-%count%.html"
-          currentPageCountHolder="%count%"
-          searchKeywordHolder="%keyword%">
-        <script>
-      function search() {
-        var host = "http://m.kanyingwu.com";
-        var root = document.getElementById("resize_list");
-        var datalist = root.getElementsByTagName("li");
-
-        if (datalist.length == 0) {
-          var response = {"code": "200", "msg": "suc", "content": ""};
-          return response;
-        }
-        var tmparray = new Array();
-        for (var i = 0; i < datalist.length; i++) {
-          var href = datalist[i].getElementsByTagName("a")[0].href;
-          var title = datalist[i].getElementsByTagName("a")[0].title;
-          var imgurl = datalist[i].getElementsByTagName("img")[0].getAttribute("src");
-          var content = datalist[i].getElementsByTagName("img")[0].alt;
-          var obj = {"title": title, "detailUrl": href, "posterUrl": imgurl, "content": content};
-          tmparray.push(obj);
-        }
-        var response = {"code": "200", "msg": "suc", "content": JSON.stringify(tmparray)};
-        return response;
-      }
-
-
-
-        </script>
-    </rule>
-
-
-</site>
-
-<site>
 
     <packgetName>com.micaitu</packgetName>
     <minApi>1</minApi>
@@ -1616,23 +1379,22 @@
 </site>
 
 <site>
-    <packgetname>com.pipigui</packgetname>
-    <minapi>1</minapi>
-    <author name="xiaoliang" avatarUrl="" description="群友提供" donateUrl=""/>
-    <info type="801" versionCode="002" versionName="v2.0" name="皮皮虾tv" description="资源还不错啊"
-          iconUrl="https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=3563646043,1894795836&fm=26&gp=0.jpg"
-          subscribeUrl="https://raw.githubusercontent.com/xm2017/xmfast/master/demo/siteApppipigui.html"/>
-    <rule type="101" typeonclickaction="" subtypename="电影" jsmethod="list();"
-          url="https://m.pipigui.cc/kehuan/index_%count%_____hits__1.html" currentpagecountholder="%count%"
-          searchkeywordholder="">
-        <script>
+
+  <packgetname>com.pipigui</packgetname>
+  <minapi>1</minapi>
+  <author name="xiaoliang" avatarUrl="" description="群友提供" donateUrl="" />
+  <info type="801" versionCode="004" versionName="v3.0" name="皮皮虾tv" description="资源还不错啊" iconUrl="https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=3563646043,1894795836&fm=26&gp=0.jpg"
+    subscribeUrl="https://raw.githubusercontent.com/xm2017/xmfast/master/demo/siteApppipigui.html" />
+  <rule type="101" typeonclickaction="" subtypename="电影" jsmethod="list();" url="https://m.pipigui.tv/kehuan/index_%count%_____hits__1.html"
+    currentpagecountholder="%count%" searchkeywordholder="">
+    <script>
       function list() {
-        var host = "https://m.pipigui.cc";
+        var host = "https://m.pipigui.tv";
         var root = document.getElementById("vod_list");
         var datalist = root.getElementsByTagName("li");
 
         if (datalist.length == 0) {
-          var response = {"code": "200", "msg": "suc", "content": ""};
+          var response = { "code": "200", "msg": "suc", "content": "" };
           return response;
         }
         var tmparray = new Array();
@@ -1641,25 +1403,24 @@
           var title = datalist[i].getElementsByTagName("a")[0].title;
           var imgurl = datalist[i].getElementsByTagName("img")[0].getAttribute("src");
           var content = datalist[i].getElementsByTagName("img")[0].alt;
-          var obj = {"title": title, "detailUrl": href, "posterUrl": imgurl, "content": content};
+          var obj = { "title": title, "detailUrl": href, "posterUrl": imgurl, "content": content };
           tmparray.push(obj);
         }
-        var response = {"code": "200", "msg": "suc", "content": JSON.stringify(tmparray)};
+        var response = { "code": "200", "msg": "suc", "content": JSON.stringify(tmparray) };
         return response;
       }
     </script>
-    </rule>
-    <rule type="101" typeonclickaction="" subtypename="追剧" jsmethod="list();"
-          url="https://m.pipigui.cc/tv/index_%count%_____addtime__1.html" currentpagecountholder="%count%"
-          searchkeywordholder="">
-        <script>
+  </rule>
+  <rule type="101" typeonclickaction="" subtypename="追剧" jsmethod="list();" url="https://m.pipigui.tv/tv/index_%count%_____addtime__1.html"
+    currentpagecountholder="%count%" searchkeywordholder="">
+    <script>
       function list() {
-        var host = "https://m.pipigui.cc";
+        var host = "https://m.pipigui.tv";
         var root = document.getElementById("vod_list");
         var datalist = root.getElementsByTagName("li");
 
         if (datalist.length == 0) {
-          var response = {"code": "200", "msg": "suc", "content": ""};
+          var response = { "code": "200", "msg": "suc", "content": "" };
           return response;
         }
         var tmparray = new Array();
@@ -1668,25 +1429,24 @@
           var title = datalist[i].getElementsByTagName("a")[0].title;
           var imgurl = datalist[i].getElementsByTagName("img")[0].getAttribute("src");
           var content = datalist[i].getElementsByTagName("img")[0].alt;
-          var obj = {"title": title, "detailUrl": href, "posterUrl": imgurl, "content": content};
+          var obj = { "title": title, "detailUrl": href, "posterUrl": imgurl, "content": content };
           tmparray.push(obj);
         }
-        var response = {"code": "200", "msg": "suc", "content": JSON.stringify(tmparray)};
+        var response = { "code": "200", "msg": "suc", "content": JSON.stringify(tmparray) };
         return response;
       }
     </script>
-    </rule>
-    <rule type="101" typeonclickaction="" subtypename="动漫" jsmethod="list();"
-          url="https://m.pipigui.cc/dongman/index_%count%_____addtime__1.html" currentpagecountholder="%count%"
-          searchkeywordholder="">
-        <script>
+  </rule>
+  <rule type="101" typeonclickaction="" subtypename="动漫" jsmethod="list();" url="https://m.pipigui.tv/dongman/index_%count%_____addtime__1.html"
+    currentpagecountholder="%count%" searchkeywordholder="">
+    <script>
       function list() {
-        var host = "https://m.pipigui.cc";
+        var host = "https://m.pipigui.tv";
         var root = document.getElementById("vod_list");
         var datalist = root.getElementsByTagName("li");
 
         if (datalist.length == 0) {
-          var response = {"code": "200", "msg": "suc", "content": ""};
+          var response = { "code": "200", "msg": "suc", "content": "" };
           return response;
         }
         var tmparray = new Array();
@@ -1695,25 +1455,24 @@
           var title = datalist[i].getElementsByTagName("a")[0].title;
           var imgurl = datalist[i].getElementsByTagName("img")[0].getAttribute("src");
           var content = datalist[i].getElementsByTagName("img")[0].alt;
-          var obj = {"title": title, "detailUrl": href, "posterUrl": imgurl, "content": content};
+          var obj = { "title": title, "detailUrl": href, "posterUrl": imgurl, "content": content };
           tmparray.push(obj);
         }
-        var response = {"code": "200", "msg": "suc", "content": JSON.stringify(tmparray)};
+        var response = { "code": "200", "msg": "suc", "content": JSON.stringify(tmparray) };
         return response;
       }
     </script>
-    </rule>
-    <rule type="101" typeonclickaction="" subtypename="综艺" jsmethod="list();"
-          url="https://m.pipigui.cc/zongyi/index_%count%_____addtime__1.html" currentpagecountholder="%count%"
-          searchkeywordholder="">
-        <script>
+  </rule>
+  <rule type="101" typeonclickaction="" subtypename="综艺" jsmethod="list();" url="https://m.pipigui.tv/zongyi/index_%count%_____addtime__1.html"
+    currentpagecountholder="%count%" searchkeywordholder="">
+    <script>
       function list() {
-        var host = "https://m.pipigui.cc";
+        var host = "https://m.pipigui.tv";
         var root = document.getElementById("vod_list");
         var datalist = root.getElementsByTagName("li");
 
         if (datalist.length == 0) {
-          var response = {"code": "200", "msg": "suc", "content": ""};
+          var response = { "code": "200", "msg": "suc", "content": "" };
           return response;
         }
         var tmparray = new Array();
@@ -1722,19 +1481,19 @@
           var title = datalist[i].getElementsByTagName("a")[0].title;
           var imgurl = datalist[i].getElementsByTagName("img")[0].getAttribute("src");
           var content = datalist[i].getElementsByTagName("img")[0].alt;
-          var obj = {"title": title, "detailUrl": href, "posterUrl": imgurl, "content": content};
+          var obj = { "title": title, "detailUrl": href, "posterUrl": imgurl, "content": content };
           tmparray.push(obj);
         }
-        var response = {"code": "200", "msg": "suc", "content": JSON.stringify(tmparray)};
+        var response = { "code": "200", "msg": "suc", "content": JSON.stringify(tmparray) };
         return response;
       }
     </script>
-    </rule>
-    <rule type="102" jsmethod="detail();">
-        <script>
+  </rule>
+  <rule type="102" jsmethod="detail();">
+    <script>
 
       function detail() {
-        var host = "https://m.pipigui.cc";
+        var host = "https://m.pipigui.tv";
         var posterUrl = $("img.loading:first").get(0).getAttribute("data-original");
         var pageTitle = $("img.loading").get(0).getAttribute("alt");
         var allText = $("div.vod_content").get(0).innerHTML.trim().replace(" ", "").replace("\n", "");
@@ -1767,10 +1526,10 @@
           for (var j = 0; j < downloadTmp.length; j++) {
             var href = host + downloadTmp[j].getElementsByTagName("a")[0].getAttribute("href");
             var title = downloadTmp[j].getElementsByTagName("a")[0].getAttribute("title");
-            var downloadBean = {"name": title, "href": href};
+            var downloadBean = { "name": title, "href": href };
             oneDownList.push(downloadBean);
           }
-          var pageDetail = {"title": titleSort, "downlistInfos": oneDownList};
+          var pageDetail = { "title": titleSort, "downlistInfos": oneDownList };
           allDownList.push(pageDetail);
         }
 
@@ -1782,23 +1541,22 @@
           "summary": actor.replace("undefined", ""),
           "downlist": allDownList
         };
-        var response = {"code": "200", "msg": "suc", "content": pageInfo};
+        var response = { "code": "200", "msg": "suc", "content": pageInfo };
         return response;
       }
 
     </script>
-    </rule>
-    <rule type="103" typeonclickaction="" subtypename="" jsmethod="search();"
-          url="https://m.pipigui.cc/vod-search-wd-%keyword%-p-%count%.html" currentpagecountholder="%count%"
-          searchkeywordholder="%keyword%">
-        <script>
+  </rule>
+  <rule type="103" typeonclickaction="" subtypename="" jsmethod="search();" url="https://m.pipigui.tv/vod-search-wd-%keyword%-p-%count%.html"
+    currentpagecountholder="%count%" searchkeywordholder="%keyword%">
+    <script>
       function search() {
-        var host = "https://m.pipigui.cc";
+        var host = "https://m.pipigui.tv";
         var root = document.getElementById("resize_list");
         var datalist = root.getElementsByTagName("li");
 
         if (datalist.length == 0) {
-          var response = {"code": "200", "msg": "suc", "content": ""};
+          var response = { "code": "200", "msg": "suc", "content": "" };
           return response;
         }
         var tmparray = new Array();
@@ -1807,14 +1565,14 @@
           var title = datalist[i].getElementsByTagName("a")[0].title;
           var imgurl = datalist[i].getElementsByTagName("img")[0].getAttribute("src");
           var content = datalist[i].getElementsByTagName("img")[0].alt;
-          var obj = {"title": title, "detailUrl": href, "posterUrl": imgurl, "content": content};
+          var obj = { "title": title, "detailUrl": href, "posterUrl": imgurl, "content": content };
           tmparray.push(obj);
         }
-        var response = {"code": "200", "msg": "suc", "content": JSON.stringify(tmparray)};
+        var response = { "code": "200", "msg": "suc", "content": JSON.stringify(tmparray) };
         return response;
       }
     </script>
-    </rule>
+  </rule>
 </site>
 
 <site>
