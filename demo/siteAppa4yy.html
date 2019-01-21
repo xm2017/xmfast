@@ -1,135 +1,123 @@
 <site>
-
-    <packgetName>com.jukan</packgetName>
-    <minApi>1</minApi>
-    <author name="noName" avatarUrl="" description="大神在此" donateUrl=""/>
-
-    <info type="801" versionCode="004" versionName="v3.0" name="聚看tv" description="聚看tv，资源还不错啊"
-          iconUrl="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1536516001550&di=776d182acfda693a471c6ccd6e9d1cd7&imgtype=0&src=http%3A%2F%2Fimg3.doubanio.com%2Fpview%2Fevent_poster%2Fraw%2Fpublic%2F9d2da8b890c94e1.jpg"
-          subscribeUrl="https://raw.githubusercontent.com/xm2017/xmfast/master/demo/siteAppDefault.html"/>
-
-    <rule type="101" typeOnclickAction="" subTypeName="电影" jsMethod="list();"
-          url="https://m.jukantv.com/dy/index_%count%_____hits__1.html" currentPageCountHolder="%count%"
-          searchKeywordHolder="">
-        <script>
+  <packgetname>
+    com.A4YY
+  </packgetname>
+  <minapi>
+    1
+  </minapi>
+  <author name="群友提供" avatarUrl="" description="大神在此" donateUrl="" />
+  <info type="801" versionCode="002" versionName="v2.0" name="A4YY" description="资源还不错啊" iconUrl="https://img03.sogoucdn.com/v2/thumb/retype_exclude_gif/ext/auto/q/80?url=https%3A%2F%2Fi01piccdn.sogoucdn.com%2F98fa40d3ba901925&amp;appid=122"
+    subscribeUrl="https://raw.githubusercontent.com/xm2017/xmfast/master/demo/siteAppa4yy.html" />
+  <rule type="101" typeonclickaction="" subtypename="电影" jsmethod="list();" url="http://m.aaqqc.com/vod-list-id-1-pg-%count%-order--by-hits-class-0-year-0-letter--area--lang-.html"
+    currentpagecountholder="%count%" searchkeywordholder="">
+    <script>
       function list() {
-        var host = "https://m.jukantv.com";
+        var host = "http://m.aaqqc.com";
         var root = document.getElementById("vod_list");
         var datalist = root.getElementsByTagName("li");
 
         if (datalist.length == 0) {
-          var response = {"code": "200", "msg": "suc", "content": ""};
+          var response = { "code": "200", "msg": "suc", "content": "" };
           return response;
         }
         var tmparray = new Array();
         for (var i = 0; i < datalist.length; i++) {
           var href = datalist[i].getElementsByTagName("a")[0].href;
           var title = datalist[i].getElementsByTagName("a")[0].title;
-          var imgurl = datalist[i].getElementsByTagName("img")[0].getAttribute("data-original");
+          var imgurl = "http:" + datalist[i].getElementsByTagName("img")[0].getAttribute("data-original");
           var content = datalist[i].getElementsByTagName("img")[0].alt;
-          var obj = {"title": title, "detailUrl": href, "posterUrl": imgurl, "content": content};
+          var obj = { "title": title, "detailUrl": href, "posterUrl": imgurl, "content": content };
           tmparray.push(obj);
         }
-        var response = {"code": "200", "msg": "suc", "content": JSON.stringify(tmparray)};
+        var response = { "code": "200", "msg": "suc", "content": JSON.stringify(tmparray) };
         return response;
       }
     </script>
-
-    </rule>
-
-    <rule type="101" typeOnclickAction="" subTypeName="追剧" jsMethod="list();"
-          url="https://m.jukantv.com/dsj/index_%count%_____addtime__1.html"
-          currentPageCountHolder="%count%"
-          searchKeywordHolder="">
-        <script>
+  </rule>
+  <rule type="101" typeonclickaction="" subtypename="追剧" jsmethod="list();" url="http://m.aaqqc.com/vod-list-id-2-pg-%count%-order--by-hits-class-0-year-0-letter--area--lang-.html"
+    currentpagecountholder="%count%" searchkeywordholder="">
+    <script>
       function list() {
-        var host = "https://m.jukantv.com";
+        var host = "http://m.aaqqc.com";
         var root = document.getElementById("vod_list");
         var datalist = root.getElementsByTagName("li");
 
         if (datalist.length == 0) {
-          var response = {"code": "200", "msg": "suc", "content": ""};
+          var response = { "code": "200", "msg": "suc", "content": "" };
           return response;
         }
         var tmparray = new Array();
         for (var i = 0; i < datalist.length; i++) {
           var href = datalist[i].getElementsByTagName("a")[0].href;
           var title = datalist[i].getElementsByTagName("a")[0].title;
-          var imgurl = datalist[i].getElementsByTagName("img")[0].getAttribute("data-original");
+          var imgurl = "http:" + datalist[i].getElementsByTagName("img")[0].getAttribute("data-original");
           var content = datalist[i].getElementsByTagName("img")[0].alt;
-          var obj = {"title": title, "detailUrl": href, "posterUrl": imgurl, "content": content};
+          var obj = { "title": title, "detailUrl": href, "posterUrl": imgurl, "content": content };
           tmparray.push(obj);
         }
-        var response = {"code": "200", "msg": "suc", "content": JSON.stringify(tmparray)};
+        var response = { "code": "200", "msg": "suc", "content": JSON.stringify(tmparray) };
         return response;
       }
     </script>
-    </rule>
-
-    <rule type="101" typeOnclickAction="" subTypeName="动漫" jsMethod="list();"
-          url="https://m.jukantv.com/Animation/index_%count%_____addtime__1.html" currentPageCountHolder="%count%"
-          searchKeywordHolder="">
-        <script>
+  </rule>
+  <rule type="101" typeonclickaction="" subtypename="动漫" jsmethod="list();" url="http://m.aaqqc.com/vod-list-id-4-pg-%count%-order--by-hits-class-0-year-0-letter--area--lang-.html"
+    currentpagecountholder="%count%" searchkeywordholder="">
+    <script>
       function list() {
-        var host = "https://m.jukantv.com";
+        var host = "http://m.aaqqc.com";
         var root = document.getElementById("vod_list");
         var datalist = root.getElementsByTagName("li");
 
         if (datalist.length == 0) {
-          var response = {"code": "200", "msg": "suc", "content": ""};
+          var response = { "code": "200", "msg": "suc", "content": "" };
           return response;
         }
         var tmparray = new Array();
         for (var i = 0; i < datalist.length; i++) {
           var href = datalist[i].getElementsByTagName("a")[0].href;
           var title = datalist[i].getElementsByTagName("a")[0].title;
-          var imgurl = datalist[i].getElementsByTagName("img")[0].getAttribute("data-original");
+          var imgurl = "http:" + datalist[i].getElementsByTagName("img")[0].getAttribute("data-original");
           var content = datalist[i].getElementsByTagName("img")[0].alt;
-          var obj = {"title": title, "detailUrl": href, "posterUrl": imgurl, "content": content};
+          var obj = { "title": title, "detailUrl": href, "posterUrl": imgurl, "content": content };
           tmparray.push(obj);
         }
-        var response = {"code": "200", "msg": "suc", "content": JSON.stringify(tmparray)};
+        var response = { "code": "200", "msg": "suc", "content": JSON.stringify(tmparray) };
         return response;
       }
     </script>
-
-    </rule>
-
-    <rule type="101" typeOnclickAction="" subTypeName="综艺" jsMethod="list();"
-          url="https://m.jukantv.com/Arts/index_%count%_____addtime__1.html" currentPageCountHolder="%count%"
-          searchKeywordHolder="">
-        <script>
+  </rule>
+  <rule type="101" typeonclickaction="" subtypename="综艺" jsmethod="list();" url="http://m.aaqqc.com/vod-list-id-3-pg-%count%-order--by-hits-class-0-year-0-letter--area--lang-.html"
+    currentpagecountholder="%count%" searchkeywordholder="">
+    <script>
       function list() {
-        var host = "https://m.jukantv.com";
+        var host = "http://m.aaqqc.com";
         var root = document.getElementById("vod_list");
         var datalist = root.getElementsByTagName("li");
 
         if (datalist.length == 0) {
-          var response = {"code": "200", "msg": "suc", "content": ""};
+          var response = { "code": "200", "msg": "suc", "content": "" };
           return response;
         }
         var tmparray = new Array();
         for (var i = 0; i < datalist.length; i++) {
           var href = datalist[i].getElementsByTagName("a")[0].href;
           var title = datalist[i].getElementsByTagName("a")[0].title;
-          var imgurl = datalist[i].getElementsByTagName("img")[0].getAttribute("data-original");
+          var imgurl = "http:" + datalist[i].getElementsByTagName("img")[0].getAttribute("data-original");
           var content = datalist[i].getElementsByTagName("img")[0].alt;
-          var obj = {"title": title, "detailUrl": href, "posterUrl": imgurl, "content": content};
+          var obj = { "title": title, "detailUrl": href, "posterUrl": imgurl, "content": content };
           tmparray.push(obj);
         }
-        var response = {"code": "200", "msg": "suc", "content": JSON.stringify(tmparray)};
+        var response = { "code": "200", "msg": "suc", "content": JSON.stringify(tmparray) };
         return response;
       }
     </script>
-
-    </rule>
-
-    <rule type="102" jsMethod="detail();">
-        <script>
+  </rule>
+  <rule type="102" jsmethod="detail();">
+    <script>
 
       function detail() {
-        var host = "https://m.jukantv.com";
-        var posterUrl = $("img.loading:first").get(0).getAttribute("data-original");
+        var host = "http://m.aaqqc.com";
+        var posterUrl = "http:" + $("img.loading:first").get(0).getAttribute("data-original");
         var pageTitle = $("img.loading").get(0).getAttribute("alt");
         var allText = $("div.vod_content").get(0).innerHTML.trim().replace(" ", "").replace("\n", "");
         var shortText = allText.substring(0, allText.length > 200 ? 200 : allText.length).trim();
@@ -161,10 +149,10 @@
           for (var j = 0; j < downloadTmp.length; j++) {
             var href = host + downloadTmp[j].getElementsByTagName("a")[0].getAttribute("href");
             var title = downloadTmp[j].getElementsByTagName("a")[0].getAttribute("title");
-            var downloadBean = {"name": title, "href": href};
+            var downloadBean = { "name": title, "href": href };
             oneDownList.push(downloadBean);
           }
-          var pageDetail = {"title": titleSort, "downlistInfos": oneDownList};
+          var pageDetail = { "title": titleSort, "downlistInfos": oneDownList };
           allDownList.push(pageDetail);
         }
 
@@ -176,45 +164,36 @@
           "summary": actor.replace("undefined", ""),
           "downlist": allDownList
         };
-        var response = {"code": "200", "msg": "suc", "content": pageInfo};
+        var response = { "code": "200", "msg": "suc", "content": pageInfo };
         return response;
       }
 
     </script>
-    </rule>
-
-    <rule type="103" typeOnclickAction="" subTypeName="" jsMethod="search();"
-          url="https://m.jukantv.com/vod-search-wd-%keyword%-p-%count%.html"
-          currentPageCountHolder="%count%"
-          searchKeywordHolder="%keyword%">
-        <script>
+  </rule>
+  <rule type="103" typeonclickaction="" subtypename="" jsmethod="search();" url="http://m.aaqqc.com/vod-search-pg-%count%-wd-%keyword%.html"
+    currentpagecountholder="%count%" searchkeywordholder="%keyword%">
+    <script>
       function search() {
-        var host = "https://m.jukantv.com";
+        var host = "http://m.aaqqc.com";
         var root = document.getElementById("resize_list");
         var datalist = root.getElementsByTagName("li");
 
         if (datalist.length == 0) {
-          var response = {"code": "200", "msg": "suc", "content": ""};
+          var response = { "code": "200", "msg": "suc", "content": "" };
           return response;
         }
         var tmparray = new Array();
         for (var i = 0; i < datalist.length; i++) {
           var href = datalist[i].getElementsByTagName("a")[0].href;
           var title = datalist[i].getElementsByTagName("a")[0].title;
-          var imgurl = datalist[i].getElementsByTagName("img")[0].getAttribute("data-original");
+          var imgurl = "http:" + datalist[i].getElementsByTagName("img")[0].getAttribute("data-original");
           var content = datalist[i].getElementsByTagName("img")[0].alt;
-          var obj = {"title": title, "detailUrl": href, "posterUrl": imgurl, "content": content};
+          var obj = { "title": title, "detailUrl": href, "posterUrl": imgurl, "content": content };
           tmparray.push(obj);
         }
-        var response = {"code": "200", "msg": "suc", "content": JSON.stringify(tmparray)};
+        var response = { "code": "200", "msg": "suc", "content": JSON.stringify(tmparray) };
         return response;
       }
     </script>
-    </rule>
-
-
+  </rule>
 </site>
-
-  
-  
-
