@@ -1518,41 +1518,6 @@
         console.log("result:" + JSON.stringify(tmparray));
         return response;
       }
-      var host = "https://www.xinpianwu.com";
-      var tmparray = new Array();
-      var response;
-      $("li.active.top-line-dot.clearfix").each(function (i) {
-        var href = $(this).find("div.thumb").find("a").attr("href");
-        var title = $(this).find("div.thumb").find("a").attr("title");
-        var imgurl = $(this).find("div.thumb").find("a").attr("data-original");
-        if (!imgurl) {
-          imgurl = $(this).find("div.thumb").find("a").attr("src");
-        }
-        var content = $(this).find("div.thumb").find("a").find("span.pic-text.text-right").text();
-        var obj = {
-          "title": title,
-          "detailUrl": host + href,
-          "posterUrl": imgurl,
-          "content": content
-        };
-        tmparray.push(obj);
-      });
-      if (tmparray.length == 0) {
-        response = {
-          "code": "200",
-          "msg": "suc",
-          "content": ""
-        };
-      } else {
-        response = {
-          "code": "200",
-          "msg": "suc",
-          "content": JSON.stringify(tmparray)
-        };
-      }
-      console.log("result:" + JSON.stringify(tmparray));
-      return response;
-      }
     </script>
   </rule>
 </site>
