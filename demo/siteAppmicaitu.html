@@ -10,11 +10,11 @@
           subscribeUrl="https://raw.githubusercontent.com/xm2017/xmfast/master/demo/siteAppmicaitu.html"/>
 
     <rule type="101" typeOnclickAction="" subTypeName="电影" jsMethod="list();"
-          url="https://m.micaitu.com/dy/index_%count%_____hits__1.html" currentPageCountHolder="%count%"
+          url="https://m.micaitu.net/dy/index_%count%_____hits__1.html" currentPageCountHolder="%count%"
           searchKeywordHolder="">
         <script>
       function list() {
-        var host = "https://m.micaitu.com";
+        var host = "https://m.micaitu.net";
         var root = document.getElementById("vod_list");
         var datalist = root.getElementsByTagName("li");
 
@@ -39,12 +39,12 @@
     </rule>
 
     <rule type="101" typeOnclickAction="" subTypeName="追剧" jsMethod="list();"
-          url="https://m.micaitu.com/dsj/index_%count%_____addtime__1.html"
+          url="https://m.micaitu.net/dsj/index_%count%_____addtime__1.html"
           currentPageCountHolder="%count%"
           searchKeywordHolder="">
         <script>
       function list() {
-        var host = "https://m.micaitu.com";
+        var host = "https://m.micaitu.net";
         var root = document.getElementById("vod_list");
         var datalist = root.getElementsByTagName("li");
 
@@ -68,11 +68,11 @@
     </rule>
 
     <rule type="101" typeOnclickAction="" subTypeName="动漫" jsMethod="list();"
-          url="https://m.micaitu.com/Animation/index_%count%_____addtime__1.html" currentPageCountHolder="%count%"
+          url="https://m.micaitu.net/Animation/index_%count%_____addtime__1.html" currentPageCountHolder="%count%"
           searchKeywordHolder="">
         <script>
       function list() {
-        var host = "https://m.micaitu.com";
+        var host = "https://m.micaitu.net";
         var root = document.getElementById("vod_list");
         var datalist = root.getElementsByTagName("li");
 
@@ -97,11 +97,11 @@
     </rule>
 
     <rule type="101" typeOnclickAction="" subTypeName="综艺" jsMethod="list();"
-          url="https://m.micaitu.com/Arts/index_%count%_____addtime__1.html" currentPageCountHolder="%count%"
+          url="https://m.micaitu.net/Arts/index_%count%_____addtime__1.html" currentPageCountHolder="%count%"
           searchKeywordHolder="">
         <script>
       function list() {
-        var host = "https://m.micaitu.com";
+        var host = "https://m.micaitu.net";
         var root = document.getElementById("vod_list");
         var datalist = root.getElementsByTagName("li");
 
@@ -129,7 +129,7 @@
         <script>
 
       function detail() {
-        var host = "https://m.micaitu.com";
+        var host = "https://m.micaitu.net";
         var posterUrl = $("img.loading:first").get(0).getAttribute("data-original");
         var pageTitle = $("img.loading").get(0).getAttribute("alt");
         var allText = $("div.vod_content").get(0).innerHTML.trim().replace(" ", "").replace("\n", "");
@@ -185,12 +185,12 @@
     </rule>
 
     <rule type="103" typeOnclickAction="" subTypeName="" jsMethod="search();"
-          url="https://m.micaitu.com/vod-search-wd-%keyword%-p-%count%.html"
+          url="https://m.micaitu.net/vod-search-wd-%keyword%-p-%count%.html"
           currentPageCountHolder="%count%"
           searchKeywordHolder="%keyword%">
         <script>
       function search() {
-        var host = "https://m.micaitu.com";
+        var host = "https://m.micaitu.net";
         var root = document.getElementById("resize_list");
         var datalist = root.getElementsByTagName("li");
 
