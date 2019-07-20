@@ -2,194 +2,200 @@
   <packgetname>com.pipigui</packgetname>
   <minapi>1</minapi>
   <author name="xiaoliang" avatarUrl="" description="群友提供" donateUrl="" />
-  <info type="801" versionCode="005" versionName="v5.0" name="皮皮虾tv" description="资源还不错啊" iconUrl="https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=3563646043,1894795836&fm=26&gp=0.jpg"
-        subscribeUrl="https://raw.githubusercontent.com/xm2017/xmfast/master/demo/siteApppipigui.html" />
-  <rule type="101" typeonclickaction="" subtypename="电影" jsmethod="list();" url="https://m.zhudaye.com/kehuan/index_%count%_____hits__1.html"
-        currentpagecountholder="%count%" searchkeywordholder="">
-      <script>
-    function list() {
-      var host = "https://m.zhudaye.com";
-      var root = document.getElementById("vod_list");
-      var datalist = root.getElementsByTagName("li");
+  <info type="801" versionCode="005" versionName="v5.0" name="皮皮虾tv" description="资源还不错啊"
+    iconUrl="https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=3563646043,1894795836&fm=26&gp=0.jpg"
+    subscribeUrl="https://raw.githubusercontent.com/xm2017/xmfast/master/demo/siteApppipigui.html" />
+  <rule type="101" typeonclickaction="" subtypename="电影" jsmethod="list();"
+    url="https://m.faquanya.com/kehuan/index_%count%_____hits__1.html" currentpagecountholder="%count%"
+    searchkeywordholder="">
+    <script>
+      function list() {
+        var host = "https://m.faquanya.com";
+        var root = document.getElementById("vod_list");
+        var datalist = root.getElementsByTagName("li");
 
-      if (datalist.length == 0) {
-        var response = { "code": "200", "msg": "suc", "content": "" };
+        if (datalist.length == 0) {
+          var response = { "code": "200", "msg": "suc", "content": "" };
+          return response;
+        }
+        var tmparray = new Array();
+        for (var i = 0; i < datalist.length; i++) {
+          var href = datalist[i].getElementsByTagName("a")[0].href;
+          var title = datalist[i].getElementsByTagName("a")[0].title;
+          var imgurl = datalist[i].getElementsByTagName("img")[0].getAttribute("src");
+          var content = datalist[i].getElementsByTagName("img")[0].alt;
+          var obj = { "title": title, "detailUrl": href, "posterUrl": imgurl, "content": content };
+          tmparray.push(obj);
+        }
+        var response = { "code": "200", "msg": "suc", "content": JSON.stringify(tmparray) };
         return response;
       }
-      var tmparray = new Array();
-      for (var i = 0; i < datalist.length; i++) {
-        var href = datalist[i].getElementsByTagName("a")[0].href;
-        var title = datalist[i].getElementsByTagName("a")[0].title;
-        var imgurl = datalist[i].getElementsByTagName("img")[0].getAttribute("src");
-        var content = datalist[i].getElementsByTagName("img")[0].alt;
-        var obj = { "title": title, "detailUrl": href, "posterUrl": imgurl, "content": content };
-        tmparray.push(obj);
-      }
-      var response = { "code": "200", "msg": "suc", "content": JSON.stringify(tmparray) };
-      return response;
-    }
-  </script>
+    </script>
   </rule>
-  <rule type="101" typeonclickaction="" subtypename="追剧" jsmethod="list();" url="https://m.zhudaye.com/tv/index_%count%_____addtime__1.html"
-        currentpagecountholder="%count%" searchkeywordholder="">
-      <script>
-    function list() {
-      var host = "https://m.zhudaye.com";
-      var root = document.getElementById("vod_list");
-      var datalist = root.getElementsByTagName("li");
+  <rule type="101" typeonclickaction="" subtypename="追剧" jsmethod="list();"
+    url="https://m.faquanya.com/tv/index_%count%_____addtime__1.html" currentpagecountholder="%count%"
+    searchkeywordholder="">
+    <script>
+      function list() {
+        var host = "https://m.faquanya.com";
+        var root = document.getElementById("vod_list");
+        var datalist = root.getElementsByTagName("li");
 
-      if (datalist.length == 0) {
-        var response = { "code": "200", "msg": "suc", "content": "" };
+        if (datalist.length == 0) {
+          var response = { "code": "200", "msg": "suc", "content": "" };
+          return response;
+        }
+        var tmparray = new Array();
+        for (var i = 0; i < datalist.length; i++) {
+          var href = datalist[i].getElementsByTagName("a")[0].href;
+          var title = datalist[i].getElementsByTagName("a")[0].title;
+          var imgurl = datalist[i].getElementsByTagName("img")[0].getAttribute("src");
+          var content = datalist[i].getElementsByTagName("img")[0].alt;
+          var obj = { "title": title, "detailUrl": href, "posterUrl": imgurl, "content": content };
+          tmparray.push(obj);
+        }
+        var response = { "code": "200", "msg": "suc", "content": JSON.stringify(tmparray) };
         return response;
       }
-      var tmparray = new Array();
-      for (var i = 0; i < datalist.length; i++) {
-        var href = datalist[i].getElementsByTagName("a")[0].href;
-        var title = datalist[i].getElementsByTagName("a")[0].title;
-        var imgurl = datalist[i].getElementsByTagName("img")[0].getAttribute("src");
-        var content = datalist[i].getElementsByTagName("img")[0].alt;
-        var obj = { "title": title, "detailUrl": href, "posterUrl": imgurl, "content": content };
-        tmparray.push(obj);
-      }
-      var response = { "code": "200", "msg": "suc", "content": JSON.stringify(tmparray) };
-      return response;
-    }
-  </script>
+    </script>
   </rule>
-  <rule type="101" typeonclickaction="" subtypename="动漫" jsmethod="list();" url="https://m.zhudaye.com/dongman/index_%count%_____addtime__1.html"
-        currentpagecountholder="%count%" searchkeywordholder="">
-      <script>
-    function list() {
-      var host = "https://m.zhudaye.com";
-      var root = document.getElementById("vod_list");
-      var datalist = root.getElementsByTagName("li");
+  <rule type="101" typeonclickaction="" subtypename="动漫" jsmethod="list();"
+    url="https://m.faquanya.com/dongman/index_%count%_____addtime__1.html" currentpagecountholder="%count%"
+    searchkeywordholder="">
+    <script>
+      function list() {
+        var host = "https://m.faquanya.com";
+        var root = document.getElementById("vod_list");
+        var datalist = root.getElementsByTagName("li");
 
-      if (datalist.length == 0) {
-        var response = { "code": "200", "msg": "suc", "content": "" };
+        if (datalist.length == 0) {
+          var response = { "code": "200", "msg": "suc", "content": "" };
+          return response;
+        }
+        var tmparray = new Array();
+        for (var i = 0; i < datalist.length; i++) {
+          var href = datalist[i].getElementsByTagName("a")[0].href;
+          var title = datalist[i].getElementsByTagName("a")[0].title;
+          var imgurl = datalist[i].getElementsByTagName("img")[0].getAttribute("src");
+          var content = datalist[i].getElementsByTagName("img")[0].alt;
+          var obj = { "title": title, "detailUrl": href, "posterUrl": imgurl, "content": content };
+          tmparray.push(obj);
+        }
+        var response = { "code": "200", "msg": "suc", "content": JSON.stringify(tmparray) };
         return response;
       }
-      var tmparray = new Array();
-      for (var i = 0; i < datalist.length; i++) {
-        var href = datalist[i].getElementsByTagName("a")[0].href;
-        var title = datalist[i].getElementsByTagName("a")[0].title;
-        var imgurl = datalist[i].getElementsByTagName("img")[0].getAttribute("src");
-        var content = datalist[i].getElementsByTagName("img")[0].alt;
-        var obj = { "title": title, "detailUrl": href, "posterUrl": imgurl, "content": content };
-        tmparray.push(obj);
-      }
-      var response = { "code": "200", "msg": "suc", "content": JSON.stringify(tmparray) };
-      return response;
-    }
-  </script>
+    </script>
   </rule>
-  <rule type="101" typeonclickaction="" subtypename="综艺" jsmethod="list();" url="https://m.zhudaye.com/zongyi/index_%count%_____addtime__1.html"
-        currentpagecountholder="%count%" searchkeywordholder="">
-      <script>
-    function list() {
-      var host = "https://m.zhudaye.com";
-      var root = document.getElementById("vod_list");
-      var datalist = root.getElementsByTagName("li");
+  <rule type="101" typeonclickaction="" subtypename="综艺" jsmethod="list();"
+    url="https://m.faquanya.com/zongyi/index_%count%_____addtime__1.html" currentpagecountholder="%count%"
+    searchkeywordholder="">
+    <script>
+      function list() {
+        var host = "https://m.faquanya.com";
+        var root = document.getElementById("vod_list");
+        var datalist = root.getElementsByTagName("li");
 
-      if (datalist.length == 0) {
-        var response = { "code": "200", "msg": "suc", "content": "" };
+        if (datalist.length == 0) {
+          var response = { "code": "200", "msg": "suc", "content": "" };
+          return response;
+        }
+        var tmparray = new Array();
+        for (var i = 0; i < datalist.length; i++) {
+          var href = datalist[i].getElementsByTagName("a")[0].href;
+          var title = datalist[i].getElementsByTagName("a")[0].title;
+          var imgurl = datalist[i].getElementsByTagName("img")[0].getAttribute("src");
+          var content = datalist[i].getElementsByTagName("img")[0].alt;
+          var obj = { "title": title, "detailUrl": href, "posterUrl": imgurl, "content": content };
+          tmparray.push(obj);
+        }
+        var response = { "code": "200", "msg": "suc", "content": JSON.stringify(tmparray) };
         return response;
       }
-      var tmparray = new Array();
-      for (var i = 0; i < datalist.length; i++) {
-        var href = datalist[i].getElementsByTagName("a")[0].href;
-        var title = datalist[i].getElementsByTagName("a")[0].title;
-        var imgurl = datalist[i].getElementsByTagName("img")[0].getAttribute("src");
-        var content = datalist[i].getElementsByTagName("img")[0].alt;
-        var obj = { "title": title, "detailUrl": href, "posterUrl": imgurl, "content": content };
-        tmparray.push(obj);
-      }
-      var response = { "code": "200", "msg": "suc", "content": JSON.stringify(tmparray) };
-      return response;
-    }
-  </script>
+    </script>
   </rule>
   <rule type="102" jsmethod="detail();">
-      <script>
+    <script>
 
-    function detail() {
-      var host = "https://m.zhudaye.com";
-      var posterUrl = $("img.loading:first").get(0).getAttribute("data-original");
-      var pageTitle = $("img.loading").get(0).getAttribute("alt");
-      var allText = $("div.vod_content").get(0).innerHTML.trim().replace(" ", "").replace("\n", "");
-      var shortText = allText.substring(0, allText.length > 200 ? 200 : allText.length).trim();
+      function detail() {
+        var host = "https://m.faquanya.com";
+        var posterUrl = $("img.loading:first").get(0).getAttribute("data-original");
+        var pageTitle = $("img.loading").get(0).getAttribute("alt");
+        var allText = $("div.vod_content").get(0).innerHTML.trim().replace(" ", "").replace("\n", "");
+        var shortText = allText.substring(0, allText.length > 200 ? 200 : allText.length).trim();
 
-      var actor;
-      var actorTmp = $("div.vod-n-l:first p").toArray();
-      for (var i = 0; i < actorTmp.length; i++) {
-        var stTmp;
-        stTmp = actorTmp[i].getElementsByTagName("em")[0].innerHTML;
-        if (stTmp.indexOf("主演") != -1) continue;
-        if (stTmp.indexOf("状态") != -1 || stTmp.indexOf("更新") != -1) {
-          stTmp = actorTmp[i].innerHTML;
+        var actor;
+        var actorTmp = $("div.vod-n-l:first p").toArray();
+        for (var i = 0; i < actorTmp.length; i++) {
+          var stTmp;
+          stTmp = actorTmp[i].getElementsByTagName("em")[0].innerHTML;
+          if (stTmp.indexOf("主演") != -1) continue;
+          if (stTmp.indexOf("状态") != -1 || stTmp.indexOf("更新") != -1) {
+            stTmp = actorTmp[i].innerHTML;
+          }
+          var stDetail = actorTmp[i].getElementsByTagName("a");
+          for (var j = 0; j < stDetail.length; j++) {
+            var stDetailTmp = stDetail[j].innerHTML;
+            stTmp = stTmp + " " + stDetailTmp;
+          }
+          actor = actor + "<br>" + stTmp;
         }
-        var stDetail = actorTmp[i].getElementsByTagName("a");
-        for (var j = 0; j < stDetail.length; j++) {
-          var stDetailTmp = stDetail[j].innerHTML;
-          stTmp = stTmp + " " + stDetailTmp;
+
+        var allDownList = new Array();
+        var allDownTitleTmp = $("div.play-title a").toArray();
+        var allDownListTmp = $(".play-box").toArray();
+        for (var i = 0; i < allDownListTmp.length; i++) {
+          var titleSort = allDownTitleTmp[i].innerHTML;
+          var downloadTmp = allDownListTmp[i].getElementsByTagName("li");
+          var oneDownList = new Array();
+          for (var j = 0; j < downloadTmp.length; j++) {
+            var href = host + downloadTmp[j].getElementsByTagName("a")[0].getAttribute("href");
+            var title = downloadTmp[j].getElementsByTagName("a")[0].getAttribute("title");
+            var downloadBean = { "name": title, "href": href };
+            oneDownList.push(downloadBean);
+          }
+          var pageDetail = { "title": titleSort, "downlistInfos": oneDownList };
+          allDownList.push(pageDetail);
         }
-        actor = actor + "<br>" + stTmp;
-      }
 
-      var allDownList = new Array();
-      var allDownTitleTmp = $("div.play-title a").toArray();
-      var allDownListTmp = $(".play-box").toArray();
-      for (var i = 0; i < allDownListTmp.length; i++) {
-        var titleSort = allDownTitleTmp[i].innerHTML;
-        var downloadTmp = allDownListTmp[i].getElementsByTagName("li");
-        var oneDownList = new Array();
-        for (var j = 0; j < downloadTmp.length; j++) {
-          var href = host + downloadTmp[j].getElementsByTagName("a")[0].getAttribute("href");
-          var title = downloadTmp[j].getElementsByTagName("a")[0].getAttribute("title");
-          var downloadBean = { "name": title, "href": href };
-          oneDownList.push(downloadBean);
-        }
-        var pageDetail = { "title": titleSort, "downlistInfos": oneDownList };
-        allDownList.push(pageDetail);
-      }
-
-      var pageInfo = {
-        "posterUrl": posterUrl,
-        "title": pageTitle,
-        "allText": allText,
-        "shortText": shortText,
-        "summary": actor.replace("undefined", ""),
-        "downlist": allDownList
-      };
-      var response = { "code": "200", "msg": "suc", "content": pageInfo };
-      return response;
-    }
-
-  </script>
-  </rule>
-  <rule type="103" typeonclickaction="" subtypename="" jsmethod="search();" url="https://m.zhudaye.com/vod-search-wd-%keyword%-p-%count%.html"
-        currentpagecountholder="%count%" searchkeywordholder="%keyword%">
-      <script>
-    function search() {
-      var host = "https://m.zhudaye.com";
-      var root = document.getElementById("resize_list");
-      var datalist = root.getElementsByTagName("li");
-
-      if (datalist.length == 0) {
-        var response = { "code": "200", "msg": "suc", "content": "" };
+        var pageInfo = {
+          "posterUrl": posterUrl,
+          "title": pageTitle,
+          "allText": allText,
+          "shortText": shortText,
+          "summary": actor.replace("undefined", ""),
+          "downlist": allDownList
+        };
+        var response = { "code": "200", "msg": "suc", "content": pageInfo };
         return response;
       }
-      var tmparray = new Array();
-      for (var i = 0; i < datalist.length; i++) {
-        var href = datalist[i].getElementsByTagName("a")[0].href;
-        var title = datalist[i].getElementsByTagName("a")[0].title;
-        var imgurl = datalist[i].getElementsByTagName("img")[0].getAttribute("src");
-        var content = datalist[i].getElementsByTagName("img")[0].alt;
-        var obj = { "title": title, "detailUrl": href, "posterUrl": imgurl, "content": content };
-        tmparray.push(obj);
+
+    </script>
+  </rule>
+  <rule type="103" typeonclickaction="" subtypename="" jsmethod="search();"
+    url="https://m.faquanya.com/vod-search-wd-%keyword%-p-%count%.html" currentpagecountholder="%count%"
+    searchkeywordholder="%keyword%">
+    <script>
+      function search() {
+        var host = "https://m.faquanya.com";
+        var root = document.getElementById("resize_list");
+        var datalist = root.getElementsByTagName("li");
+
+        if (datalist.length == 0) {
+          var response = { "code": "200", "msg": "suc", "content": "" };
+          return response;
+        }
+        var tmparray = new Array();
+        for (var i = 0; i < datalist.length; i++) {
+          var href = datalist[i].getElementsByTagName("a")[0].href;
+          var title = datalist[i].getElementsByTagName("a")[0].title;
+          var imgurl = datalist[i].getElementsByTagName("img")[0].getAttribute("src");
+          var content = datalist[i].getElementsByTagName("img")[0].alt;
+          var obj = { "title": title, "detailUrl": href, "posterUrl": imgurl, "content": content };
+          tmparray.push(obj);
+        }
+        var response = { "code": "200", "msg": "suc", "content": JSON.stringify(tmparray) };
+        return response;
       }
-      var response = { "code": "200", "msg": "suc", "content": JSON.stringify(tmparray) };
-      return response;
-    }
-  </script>
+    </script>
   </rule>
 </site>
