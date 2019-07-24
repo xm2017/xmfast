@@ -1,0 +1,257 @@
+﻿//https://raw.githubusercontent.com/xm2017/xmfast/master/demo/siteZyDefault.html
+<site>
+    <packgetname>com.okzy</packgetname>
+    <minapi>1</minapi>
+    <author name="noName" avatarUrl="" description="demo" donateUrl="" />
+    <info type="801" versionCode="002" versionName="v2.0" name="ok资源" description="资源站测试" iconUrl="" 
+    subscribeUrl="https://raw.githubusercontent.com/xm2017/xmfast/master/demo/siteZyok.html" />
+
+    <rule type="101" typeonclickaction="" subtypename="电影" jsmethod="list();"
+        url="http://www.jisudhw.com/?m=vod-type-id-1-pg-%count%.html" currentpagecountholder="%count%"
+        searchkeywordholder="">
+        <script>
+            function list() {
+                var datalist = $("div.xing_vb").find("li");
+                if (datalist.length == 0) {
+                    var response = {
+                        "code": "200",
+                        "msg": "suc",
+                        "content": ""
+                    };
+                    return response;
+                }
+                var tmparray = new Array();
+                $(datalist).each(function () {
+                    var host = "http://www.jisudhw.com";
+                    var href = $(this).find("span.xing_vb4").find("a").attr("href");
+                    var title = $(this).find("span.xing_vb4").find("a").text();
+                    var imgurl;
+                    var content = $(this).find("span.xing_vb5").text();
+                    var obj = { "title": title, "detailUrl": host + href, "posterUrl": imgurl, "content": content, "itemType": 1 };
+                    if (content.indexOf("福利") == -1 && content.indexOf("伦理") == -1) {
+                        if (title.length > 0) {
+                            tmparray.push(obj);
+                        }
+                    }
+                });
+                var response = {
+                    "code": "200",
+                    "msg": "suc",
+                    "content": JSON.stringify(tmparray)
+                };
+                return response;
+            }
+        </script>
+    </rule>
+
+    <rule type="101" typeonclickaction="" subtypename="追剧" jsmethod="list();"
+        url="http://www.jisudhw.com/?m=vod-type-id-2-pg-%count%.html" currentpagecountholder="%count%"
+        searchkeywordholder="">
+        <script>
+            function list() {
+                var datalist = $("div.xing_vb").find("li");
+                if (datalist.length == 0) {
+                    var response = {
+                        "code": "200",
+                        "msg": "suc",
+                        "content": ""
+                    };
+                    return response;
+                }
+                var tmparray = new Array();
+                $(datalist).each(function () {
+                    var host = "http://www.jisudhw.com";
+                    var href = $(this).find("span.xing_vb4").find("a").attr("href");
+                    var title = $(this).find("span.xing_vb4").find("a").text();
+                    var imgurl;
+                    var content = $(this).find("span.xing_vb5").text();
+                    var obj = { "title": title, "detailUrl": host + href, "posterUrl": imgurl, "content": content, "itemType": 1 };
+                    if (content.indexOf("福利") == -1 && content.indexOf("伦理") == -1) {
+                        if (title.length > 0) {
+                            tmparray.push(obj);
+                        }
+                    }
+                });
+                var response = {
+                    "code": "200",
+                    "msg": "suc",
+                    "content": JSON.stringify(tmparray)
+                };
+                return response;
+            }
+        </script>
+    </rule>
+
+    <rule type="101" typeonclickaction="" subtypename="动漫" jsmethod="list();"
+        url="http://www.jisudhw.com/?m=vod-type-id-4-pg-%count%.html" currentpagecountholder="%count%"
+        searchkeywordholder="">
+        <script>
+            function list() {
+                var datalist = $("div.xing_vb").find("li");
+                if (datalist.length == 0) {
+                    var response = {
+                        "code": "200",
+                        "msg": "suc",
+                        "content": ""
+                    };
+                    return response;
+                }
+                var tmparray = new Array();
+                $(datalist).each(function () {
+                    var host = "http://www.jisudhw.com";
+                    var href = $(this).find("span.xing_vb4").find("a").attr("href");
+                    var title = $(this).find("span.xing_vb4").find("a").text();
+                    var imgurl;
+                    var content = $(this).find("span.xing_vb5").text();
+                    var obj = { "title": title, "detailUrl": host + href, "posterUrl": imgurl, "content": content, "itemType": 1 };
+                    if (content.indexOf("福利") == -1 && content.indexOf("伦理") == -1) {
+                        if (title.length > 0) {
+                            tmparray.push(obj);
+                        }
+                    }
+                });
+                var response = {
+                    "code": "200",
+                    "msg": "suc",
+                    "content": JSON.stringify(tmparray)
+                };
+                return response;
+            }
+        </script>
+    </rule>
+
+    <rule type="101" typeonclickaction="" subtypename="综艺" jsmethod="list();"
+        url="http://www.jisudhw.com/?m=vod-type-id-3-pg-%count%.html" currentpagecountholder="%count%"
+        searchkeywordholder="">
+        <script>
+            function list() {
+                var datalist = $("div.xing_vb").find("li");
+                if (datalist.length == 0) {
+                    var response = {
+                        "code": "200",
+                        "msg": "suc",
+                        "content": ""
+                    };
+                    return response;
+                }
+                var tmparray = new Array();
+                $(datalist).each(function () {
+                    var host = "http://www.jisudhw.com";
+                    var href = $(this).find("span.xing_vb4").find("a").attr("href");
+                    var title = $(this).find("span.xing_vb4").find("a").text();
+                    var imgurl;
+                    var content = $(this).find("span.xing_vb5").text();
+                    var obj = { "title": title, "detailUrl": host + href, "posterUrl": imgurl, "content": content, "itemType": 1 };
+                    if (content.indexOf("福利") == -1 && content.indexOf("伦理") == -1) {
+                        if (title.length > 0) {
+                            tmparray.push(obj);
+                        }
+                    }
+                });
+                var response = {
+                    "code": "200",
+                    "msg": "suc",
+                    "content": JSON.stringify(tmparray)
+                };
+                return response;
+            }
+        </script>
+    </rule>
+
+    <rule type="102" jsmethod="detail();">
+        <script>
+            function detail() {
+                var posterUrl;
+                var pageTitle = $("div.vodInfo").find("h2").text();
+                var allText = $("div.ibox.playBox").next().find("div.vodplayinfo").first().text().trim();
+                var shortText = allText.substring(0, allText.length > 200 ? 200 : allText.length).trim();
+
+                var actor = "";
+                var actorTmp = $("div.vodinfobox li").toArray();
+                for (var i = 0; i < actorTmp.length; i++) {
+                    var stTmp = $(actorTmp[i]).text();
+                    if (stTmp.indexOf("类型") != -1 || stTmp.indexOf("状态") != -1 || stTmp.indexOf("更新") != -1 || stTmp.indexOf("地区") != -1) {
+                        actor = stTmp + "<br>" + actor;
+                    }
+                }
+
+                var allDownList = new Array();
+                var allDownTitleTmp = $("div.vodplayinfo h3").toArray();
+                var allDownListTmp = $("div.vodplayinfo ul").toArray();
+                for (var i = 1; i < allDownListTmp.length; i++) {
+                    var titleSort = $(allDownTitleTmp[i - 1]).find("span").text();
+                    var downloadTmp = allDownListTmp[i].getElementsByTagName("li");
+                    var oneDownList = new Array();
+                    for (var j = 0; j < downloadTmp.length; j++) {
+                        var tmp = $(downloadTmp[j]).text();
+                        var title = tmp.substring(0, tmp.indexOf("$"));
+                        var href = tmp.substring(tmp.indexOf("$") + 1, tmp.length);
+                        var downloadBean = {
+                            "name": title,
+                            "href": href
+                        };
+                        oneDownList.push(downloadBean);
+                    }
+                    var pageDetail = {
+                        "title": titleSort,
+                        "downlistInfos": oneDownList
+                    };
+                    allDownList.push(pageDetail);
+                }
+
+                var pageInfo = {
+                    "posterUrl": posterUrl,
+                    "title": pageTitle,
+                    "allText": allText,
+                    "shortText": shortText,
+                    "summary": actor,
+                    "downlist": allDownList
+                };
+                var response = {
+                    "code": "200",
+                    "msg": "suc",
+                    "content": pageInfo
+                };
+                return response;
+            }
+        </script>
+    </rule>
+
+    <rule type="103" typeonclickaction="" subtypename="" jsmethod="search();"
+        url="http://www.jisudhw.com/index.php?m=vod-search" currentpagecountholder="%count%"
+        searchPostData="wd=%keyword%&submit=search" searchkeywordholder="%keyword%">
+        <script>
+            function search() {
+                var datalist = $("div.xing_vb").find("li");
+                if (datalist.length == 0) {
+                    var response = {
+                        "code": "200",
+                        "msg": "suc",
+                        "content": ""
+                    };
+                    return response;
+                }
+                var tmparray = new Array();
+                $(datalist).each(function () {
+                    var host = "http://www.jisudhw.com";
+                    var href = $(this).find("span.xing_vb4").find("a").attr("href");
+                    var title = $(this).find("span.xing_vb4").find("a").text();
+                    var imgurl;
+                    var content = $(this).find("span.xing_vb5").text();
+                    var obj = { "title": title, "detailUrl": host + href, "posterUrl": imgurl, "content": content, "itemType": 1 };
+                    if (content.indexOf("福利") == -1 && content.indexOf("伦理") == -1) {
+                        if (title.length > 0) {
+                            tmparray.push(obj);
+                        }
+                    }
+                });
+                var response = {
+                    "code": "200",
+                    "msg": "suc",
+                    "content": JSON.stringify(tmparray)
+                };
+                return response;
+            }
+        </script>
+    </rule>
+</site>
