@@ -3,12 +3,9 @@
     <packgetname>com.jisuzy</packgetname>
     <minapi>1</minapi>
     <author name="noName" avatarUrl="" description="demo" donateUrl="" />
-    <info type="801" versionCode="002" versionName="v2.0" name="jisu资源" description="资源站测试" iconUrl=""
-        subscribeUrl="https://raw.githubusercontent.com/xm2017/xmfast/master/demo/siteZyjisu.html" />
+    <info type="801" versionCode="002" versionName="v2.0" name="jisu资源" description="资源站测试" iconUrl="" subscribeUrl="https://raw.githubusercontent.com/xm2017/xmfast/master/demo/siteZyjisu.html" />
 
-    <rule type="101" typeonclickaction="" subtypename="电影" jsmethod="list();"
-        url="http://www.caijizy.com/?m=vod-type-id-1-pg-%count%.html" currentpagecountholder="%count%"
-        searchkeywordholder="">
+    <rule type="101" typeonclickaction="" subtypename="电影" jsmethod="list();" url="http://www.caijizy.com/?m=vod-type-id-1-pg-%count%.html" currentpagecountholder="%count%" searchkeywordholder="">
         <script>
             function list() {
                 var datalist = $("tbody#data_list").find("tr.DianDian");
@@ -21,32 +18,37 @@
                     return response;
                 }
                 var tmparray = new Array();
-                $(datalist).each(function () {
-                    var host = "http://www.caijizy.com";
-                    var href = $(this).find("td.l").find("a").attr("href");
-                    var title = $(this).find("td.l").find("a").text();
-                    var imgurl;
-                    var content = $(this).find("td").next().text();
-                    var obj = { "title": title, "detailUrl": host + href, "posterUrl": imgurl, "content": content, "itemType": 1 };
-                    if (content.indexOf("福利") == -1 && content.indexOf("伦理") == -1) {
-                        if (title.length > 0) {
-                            tmparray.push(obj);
+                $(datalist).each(function() {
+                        var host = "http://www.caijizy.com";
+                        var href = $(this).find("td.l").find("a").attr("href");
+                        var title = $(this).find("td.l").find("a").text();
+                        var imgurl;
+                        var content = $(this).find("td").next().text();
+                        var obj = {
+                            "title": title,
+                            "detailUrl": host + href,
+                            "posterUrl": imgurl,
+                            "content": content,
+                            "itemType": 1
+                        };
+                        if (content.indexOf("福利") == -1 && content.indexOf("伦理") == -1 && content.indexOf("美女视频") == -1 && content.indexOf("韩国主播") == -1 && content.indexOf("美女写真") == -1) {
+                            if (title.length > 0) {
+                                tmparray.push(obj);
+                            }
                         }
                     }
                 });
-                var response = {
-                    "code": "200",
-                    "msg": "suc",
-                    "content": JSON.stringify(tmparray)
-                };
-                return response;
+            var response = {
+                "code": "200",
+                "msg": "suc",
+                "content": JSON.stringify(tmparray)
+            };
+            return response;
             }
         </script>
     </rule>
 
-    <rule type="101" typeonclickaction="" subtypename="追剧" jsmethod="list();"
-        url="http://www.caijizy.com/?m=vod-type-id-2-pg-%count%.html" currentpagecountholder="%count%"
-        searchkeywordholder="">
+    <rule type="101" typeonclickaction="" subtypename="追剧" jsmethod="list();" url="http://www.caijizy.com/?m=vod-type-id-2-pg-%count%.html" currentpagecountholder="%count%" searchkeywordholder="">
         <script>
             function list() {
                 var datalist = $("tbody#data_list").find("tr.DianDian");
@@ -59,16 +61,20 @@
                     return response;
                 }
                 var tmparray = new Array();
-                $(datalist).each(function () {
+                $(datalist).each(function() {
                     var host = "http://www.caijizy.com";
                     var href = $(this).find("td.l").find("a").attr("href");
                     var title = $(this).find("td.l").find("a").text();
                     var imgurl;
                     var content = $(this).find("td").next().text();
                     var obj = {
-                        "title": title, "detailUrl": host + href, "posterUrl": imgurl, "content": content, "itemType": 1
+                        "title": title,
+                        "detailUrl": host + href,
+                        "posterUrl": imgurl,
+                        "content": content,
+                        "itemType": 1
                     };
-                    if (content.indexOf("福利") == -1 && content.indexOf("伦理") == -1) {
+                    if (content.indexOf("福利") == -1 && content.indexOf("伦理") == -1 && content.indexOf("美女视频") == -1 && content.indexOf("韩国主播") == -1 && content.indexOf("美女写真") == -1) {
                         if (title.length > 0) {
                             tmparray.push(obj);
                         }
@@ -84,9 +90,7 @@
         </script>
     </rule>
 
-    <rule type="101" typeonclickaction="" subtypename="动漫" jsmethod="list();"
-        url="http://www.caijizy.com/?m=vod-type-id-4-pg-%count%.html" currentpagecountholder="%count%"
-        searchkeywordholder="">
+    <rule type="101" typeonclickaction="" subtypename="动漫" jsmethod="list();" url="http://www.caijizy.com/?m=vod-type-id-4-pg-%count%.html" currentpagecountholder="%count%" searchkeywordholder="">
         <script>
             function list() {
                 var datalist = $("tbody#data_list").find("tr.DianDian");
@@ -99,14 +103,20 @@
                     return response;
                 }
                 var tmparray = new Array();
-                $(datalist).each(function () {
+                $(datalist).each(function() {
                     var host = "http://www.caijizy.com";
                     var href = $(this).find("td.l").find("a").attr("href");
                     var title = $(this).find("td.l").find("a").text();
                     var imgurl;
                     var content = $(this).find("td").next().text();
-                    var obj = { "title": title, "detailUrl": host + href, "posterUrl": imgurl, "content": content, "itemType": 1 };
-                    if (content.indexOf("福利") == -1 && content.indexOf("伦理") == -1) {
+                    var obj = {
+                        "title": title,
+                        "detailUrl": host + href,
+                        "posterUrl": imgurl,
+                        "content": content,
+                        "itemType": 1
+                    };
+                    if (content.indexOf("福利") == -1 && content.indexOf("伦理") == -1 && content.indexOf("美女视频") == -1 && content.indexOf("韩国主播") == -1 && content.indexOf("美女写真") == -1) {
                         if (title.length > 0) {
                             tmparray.push(obj);
                         }
@@ -122,9 +132,7 @@
         </script>
     </rule>
 
-    <rule type="101" typeonclickaction="" subtypename="综艺" jsmethod="list();"
-        url="http://www.caijizy.com/?m=vod-type-id-3-pg-%count%.html" currentpagecountholder="%count%"
-        searchkeywordholder="">
+    <rule type="101" typeonclickaction="" subtypename="综艺" jsmethod="list();" url="http://www.caijizy.com/?m=vod-type-id-3-pg-%count%.html" currentpagecountholder="%count%" searchkeywordholder="">
         <script>
             function list() {
                 var datalist = $("tbody#data_list").find("tr.DianDian");
@@ -137,14 +145,20 @@
                     return response;
                 }
                 var tmparray = new Array();
-                $(datalist).each(function () {
+                $(datalist).each(function() {
                     var host = "http://www.caijizy.com";
                     var href = $(this).find("td.l").find("a").attr("href");
                     var title = $(this).find("td.l").find("a").text();
                     var imgurl;
                     var content = $(this).find("td").next().text();
-                    var obj = { "title": title, "detailUrl": host + href, "posterUrl": imgurl, "content": content, "itemType": 1 };
-                    if (content.indexOf("福利") == -1 && content.indexOf("伦理") == -1) {
+                    var obj = {
+                        "title": title,
+                        "detailUrl": host + href,
+                        "posterUrl": imgurl,
+                        "content": content,
+                        "itemType": 1
+                    };
+                    if (content.indexOf("福利") == -1 && content.indexOf("伦理") == -1 && content.indexOf("美女视频") == -1 && content.indexOf("韩国主播") == -1 && content.indexOf("美女写真") == -1) {
                         if (title.length > 0) {
                             tmparray.push(obj);
                         }
@@ -229,9 +243,7 @@
         </script>
     </rule>
 
-    <rule type="103" typeonclickaction="" subtypename="" jsmethod="search();"
-        url="http://www.caijizy.com/index.php?m=vod-search" currentpagecountholder="%count%"
-        searchPostData="wd=%keyword%" searchkeywordholder="%keyword%">
+    <rule type="103" typeonclickaction="" subtypename="" jsmethod="search();" url="http://www.caijizy.com/index.php?m=vod-search" currentpagecountholder="%count%" searchPostData="wd=%keyword%" searchkeywordholder="%keyword%">
         <script>
             function search() {
                 var datalist = $("tbody#data_list").find("tr.DianDian");
@@ -244,14 +256,20 @@
                     return response;
                 }
                 var tmparray = new Array();
-                $(datalist).each(function () {
+                $(datalist).each(function() {
                     var host = "http://www.caijizy.com";
                     var href = $(this).find("td.l").find("a").attr("href");
                     var title = $(this).find("td.l").find("a").text();
                     var imgurl;
                     var content = $(this).find("td").next().text();
-                    var obj = { "title": title, "detailUrl": host + href, "posterUrl": imgurl, "content": content, "itemType": 1 };
-                    if (content.indexOf("福利") == -1 && content.indexOf("伦理") == -1) {
+                    var obj = {
+                        "title": title,
+                        "detailUrl": host + href,
+                        "posterUrl": imgurl,
+                        "content": content,
+                        "itemType": 1
+                    };
+                    if (content.indexOf("福利") == -1 && content.indexOf("伦理") == -1 && content.indexOf("美女视频") == -1 && content.indexOf("韩国主播") == -1 && content.indexOf("美女写真") == -1) {
                         if (title.length > 0) {
                             tmparray.push(obj);
                         }
