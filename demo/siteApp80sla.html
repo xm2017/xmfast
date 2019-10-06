@@ -3,7 +3,7 @@
   <minApi>1</minApi>
   <author name="noName" avatarUrl="" description="大神在此" donateUrl="" />
 
-  <info type="801" versionCode="012" versionName="v1.2" name="80s" description=""
+  <info type="801" versionCode="013" versionName="v1.3" name="80s" description=""
     iconUrl="https://m.80s.la/wap/picture/logo.jpg"
     subscribeUrl="https://raw.githubusercontent.com/xm2017/xmfast/master/demo/siteApp80sla.html" />
 
@@ -23,7 +23,13 @@
           var title = $(this).find("div.list_mov_title").find("a").text().trim();
           var imgurl = "https:" + $(this).find("img").attr("src").trim();
           var content = $(this).find("div.list_mov_title").find("em").text().trim();
-          var obj = { "title": title, "detailUrl": href, "posterUrl": imgurl, "content": content };
+          var obj = {
+                        "title": title,
+                        "detailUrl": host + href,
+                        "posterUrl": imgurl,
+                        "content": content,
+                        "itemType": 1
+                    };          
           tmparray.push(obj);
         });
         var response = { "code": "200", "msg": "suc", "content": JSON.stringify(tmparray) };
@@ -49,7 +55,13 @@
           var title = $(this).find("div.list_mov_title").find("a").text().trim();
           var imgurl = "https:" + $(this).find("img").attr("src").trim();
           var content = $(this).find("div.list_mov_title").find("em").text().trim();
-          var obj = { "title": title, "detailUrl": href, "posterUrl": imgurl, "content": content };
+          var obj = {
+                        "title": title,
+                        "detailUrl": host + href,
+                        "posterUrl": imgurl,
+                        "content": content,
+                        "itemType": 1
+                    };          
           tmparray.push(obj);
         });
         var response = { "code": "200", "msg": "suc", "content": JSON.stringify(tmparray) };
@@ -74,7 +86,13 @@
           var title = $(this).find("div.list_mov_title").find("a").text().trim();
           var imgurl = "https:" + $(this).find("img").attr("src").trim();
           var content = $(this).find("div.list_mov_title").find("em").text().trim();
-          var obj = { "title": title, "detailUrl": href, "posterUrl": imgurl, "content": content };
+          var obj = {
+                        "title": title,
+                        "detailUrl": host + href,
+                        "posterUrl": imgurl,
+                        "content": content,
+                        "itemType": 1
+                    };          
           tmparray.push(obj);
         });
         var response = { "code": "200", "msg": "suc", "content": JSON.stringify(tmparray) };
@@ -100,7 +118,13 @@
           var title = $(this).find("div.list_mov_title").find("a").text().trim();
           var imgurl = "https:" + $(this).find("img").attr("src").trim();
           var content = $(this).find("div.list_mov_title").find("em").text().trim();
-          var obj = { "title": title, "detailUrl": href, "posterUrl": imgurl, "content": content };
+          var obj = {
+                        "title": title,
+                        "detailUrl": host + href,
+                        "posterUrl": imgurl,
+                        "content": content,
+                        "itemType": 1
+                    };          
           tmparray.push(obj);
         });
         var response = { "code": "200", "msg": "suc", "content": JSON.stringify(tmparray) };
@@ -199,7 +223,8 @@
             "title": title,
             "detailUrl": href,
             "posterUrl": imgurl,
-            "content": content
+            "content": content,
+            "itemType": 1
           };
           tmparray.push(obj);
         });
