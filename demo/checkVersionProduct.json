@@ -1,7 +1,7 @@
 {
-  "isForcedUpdate": false,
-  "versionCode": "600102",
-  "versionName": "6.1.2",
-  "updateContent": "1,新增多线程加速缓存 2,'我的-使用帮助'加群获取更多插件",
-  "downLoadUrl": "https://www.lanzous.com/i9xrekd"
+  "isForcedUpdate": true,
+  "versionCode": "600201",
+  "versionName": "6.2.1",
+  "updateContent": "强烈建议更新 1,修复卡顿崩溃问题 2,精简体积50%",
+  "downLoadUrl": "https://www.lanzous.com/ia8z91i"
 }
