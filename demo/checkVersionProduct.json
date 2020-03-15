@@ -1,5 +1,5 @@
 {
-  "isForcedUpdate": true,
+  "isForcedUpdate": false,
   "versionCode": "600201",
   "versionName": "6.2.1",
   "updateContent": "强烈建议更新 1,修复卡顿崩溃问题 2,精简体积50%",
