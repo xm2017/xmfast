@@ -32,8 +32,8 @@
 // @require      https://update.greasyfork.org/scripts/455186/1355010/WhiteSevsUtils.js
 // @require      https://update.greasyfork.org/scripts/465772/1344519/DOMUtils.js
 // @require      https://update.greasyfork.org/scripts/488179/1332779/showdown.js
-// @downloadURL https://update.greasyfork.org/scripts/418349/%E3%80%90%E7%A7%BB%E5%8A%A8%E7%AB%AF%E3%80%91%E7%99%BE%E5%BA%A6%E7%B3%BB%E4%BC%98%E5%8C%96.user.js
-// @updateURL https://update.greasyfork.org/scripts/418349/%E3%80%90%E7%A7%BB%E5%8A%A8%E7%AB%AF%E3%80%91%E7%99%BE%E5%BA%A6%E7%B3%BB%E4%BC%98%E5%8C%96.meta.js
+// @downloadURL https://raw.githubusercontent.com/xm2017/xmfast/master/test.user.js
+// @updateURL https://raw.githubusercontent.com/xm2017/xmfast/master/test.user.js
 // ==/UserScript==
 
 (function () {
