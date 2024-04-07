@@ -122,6 +122,7 @@
     GM_registerMenuCommand,
     GM_unregisterMenuCommand,
   });
+  debugger;
 
   class LoadingView {
     /**
