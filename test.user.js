@@ -1,9 +1,9 @@
 // ==UserScript==
-// @name         【移动端】百度系优化
+// @name         【移动端】百度系优化2
 // @icon         https://www.baidu.com/favicon.ico
-// @namespace    https://greasyfork.org/zh-CN/scripts/418349
+// @namespace    https://greasyfork.org/zh-CN/scripts/4183492
 // @supportURL   https://github.com/WhiteSevs/TamperMonkeyScript/issues
-// @version      2024.9.6.16
+// @version      2024.9.6.17
 // @author       WhiteSevs
 // @run-at       document-start
 // @description  用于【移动端】的百度系列产品优化，包括【百度搜索】、【百家号】、【百度贴吧】、【百度文库】、【百度经验】、【百度百科】、【百度知道】、【百度翻译】、【百度图片】、【百度地图】、【百度好看视频】、【百度爱企查】、【百度问题】、【百度识图】等
@@ -122,7 +122,6 @@
     GM_registerMenuCommand,
     GM_unregisterMenuCommand,
   });
-  debugger;
 
   class LoadingView {
     /**
@@ -6718,15 +6717,15 @@
       GM_addStyle(this.css.tieba);
       log.info("插入CSS规则");
       if (Router.isTieBaPost()) {
-        if (PopsPanel.getValue("baidu_tieba_optimize_see_comments")) {
+        if (PopsPanel.getValue("baidu_tieba_optimize_see_comments",true)) {
           log.success("优化查看评论");
           tiebaCommentConfig.init();
         }
-        if (PopsPanel.getValue("baidu_tieba_optimize_image_preview")) {
+        if (PopsPanel.getValue("baidu_tieba_optimize_image_preview",true)) {
           log.success("优化图片预览");
           tiebaPost.optimizeImagePreview();
         }
-        if (PopsPanel.getValue("baidu_tieba_repairErrorThread")) {
+        if (PopsPanel.getValue("baidu_tieba_repairErrorThread",true)) {
           log.success("强制查看-贴子不存在或者已被删除");
           tiebaPost.repairErrorThread();
         }
