@@ -19,6 +19,8 @@
 /viewad/
 /show_ads
 /ad/third-party
+/?channelCode=
+||afwmk.xyz^
 ||sas816.ujikdd041o.cn^
 ||c.top267.com^
 ||cp.28acglz.com^
