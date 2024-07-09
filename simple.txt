@@ -20,6 +20,8 @@
 /show_ads
 /ad/third-party
 /?channelCode=*
+||irjq*.xyz^
+||irjq246.xyz^
 ||afwmk.xyz^
 ||sas816.ujikdd041o.cn^
 ||c.top267.com^
